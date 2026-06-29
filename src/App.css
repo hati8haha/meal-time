@@ -5,3 +5,58 @@ body {
 * {
   box-sizing: border-box;
 }
+
+.backend-cold-start-notice {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: min(360px, calc(100vw - 32px));
+  padding: 14px 16px;
+  color: #1f2a37;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(31, 42, 55, 0.12);
+  border-left: 4px solid #f97316;
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(31, 42, 55, 0.18);
+  pointer-events: none;
+}
+
+.backend-cold-start-notice__spinner {
+  flex: 0 0 auto;
+  width: 24px;
+  height: 24px;
+  border: 3px solid #fed7aa;
+  border-top-color: #f97316;
+  border-radius: 50%;
+  animation: backend-cold-start-spin 0.9s linear infinite;
+}
+
+.backend-cold-start-notice__title {
+  margin-bottom: 3px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.backend-cold-start-notice__message {
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+@keyframes backend-cold-start-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .backend-cold-start-notice {
+    right: 16px;
+    bottom: 16px;
+    align-items: flex-start;
+  }
+}

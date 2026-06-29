@@ -20,6 +20,8 @@ import MapPage from "./pages/MapPage";
 import CartPage from "./pages/CartPage";
 import Navbar from "./Components/NavBar";
 import Footer from "./Components/Footer";
+import BackendColdStartNotice from "./Components/BackendColdStartNotice";
+import { startBackendColdStartMonitor } from "./utils/backendColdStartMonitor";
 import AdminMemberPage from "./pages/AdminMemberPage";
 import AdminOrderPage from "./pages/AdminOrderPage";
 import AdminProductTypePage from "./pages/AdminProductTypePage";
@@ -38,6 +40,7 @@ import MessagePage from "./pages/MessagePage";
 function App() {
   const dispatch = useDispatch();
   React.useEffect(() => {
+    startBackendColdStartMonitor();
     window.scrollTo({
       top: 0,
       left: 0,
@@ -140,6 +143,7 @@ function App() {
           </Route>
         </Switch>
         <Footer />
+        <BackendColdStartNotice />
       </Router>
     </div>
   );
