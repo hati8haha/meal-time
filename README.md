@@ -1,6 +1,6 @@
 # 限時取餐 MealTime
 
-網站連結 : http://meal-time-official.herokuapp.com
+網站連結 : https://meal-time.pages.dev/
 
 ## 專案簡介
 限食取餐 meal time 是因剩食議題而誕生的食物交易贈送平台。現代社會帶給人們資源與便利，但同時也造成了許多食物的浪費。透過限食取餐 meal time，可以即時將過剩的食物放上平台，提供給需要的人，讓食物不再有浪費。
